@@ -11,10 +11,9 @@ using namespace std;
 
 vector<int> add(vector<int> &A, vector<int> &B)
 {
+    vector<int> C;
 
-    vector<int> C; //进位
-
-    int t = 0;
+    int t = 0;// 进位
 
     for (int i = 0; i < A.size() || i < B.size(); i++)
     {
