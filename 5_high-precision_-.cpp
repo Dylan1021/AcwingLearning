@@ -8,8 +8,8 @@
 #include <vector> //表示大整数，自带size表示长度
 
 using namespace std;
-
-bool comp(vector<int> &A, vector<int> &B)
+// A - B
+bool cmp(vector<int> &A, vector<int> &B)
 {
     if (A.size() != B.size())
         return A.size() > B.size();
@@ -50,8 +50,17 @@ int main()
     for (int i = b.size() - 1; i >= 0; i--)
         B.push_back(b[i] - '0');
 
-    auto C = sub(A, B); //编译器自己推断C的类型
-
-    for (int i = C.size() - 1; i >= 0; i--)
-        printf("%d ", C[i]);
+    if (cmp(A, B))
+    {
+        auto C = sub(A, B);
+        for (int i = C.size() - 1; i >= 0; i--)
+            printf("%d", C[i]);
+    }
+    else
+    {
+        auto C = sub(B, A);
+        printf("-");
+        for (int i = C.size() - 1; i >= 0; i--)
+            printf("%d", C[i]);
+    }
 }

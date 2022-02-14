@@ -8,7 +8,7 @@
 #include <vector>   //表示大整数，自带size表示长度
 
 using namespace std;
-
+// A + B
 vector<int> add(vector<int> &A, vector<int> &B)
 {
     vector<int> C;
