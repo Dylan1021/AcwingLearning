@@ -5,18 +5,18 @@
  * 4.大整数 ➗ 小整数
  */
 #include <iostream>
-#include <vector> // 表示大整数，自带size表示长度
+#include <vector>   //表示大整数，自带size表示长度
 
 using namespace std;
-
-const int N = 1e6 + 10;
 
 vector<int> add(vector<int> &A, vector<int> &B)
 {
 
-    vector<int> C;
+    vector<int> C; //进位
+
     int t = 0;
-    for (int i = 0; i < A.size() || i < B.siez(); i++)
+
+    for (int i = 0; i < A.size() || i < B.size(); i++)
     {
         if (i < A.size())
             t += A[i];
@@ -41,7 +41,7 @@ int main()
     for (int i = b.size() - 1; i >= 0; i--)
         B.push_back(b[i] - '0');
 
-    auto C = add(A, B);
+    auto C = add(A, B); //编译器自己推断C的类型
 
     for (int i = C.size() - 1; i >= 0; i--)
         printf("%d ", C[i]);
