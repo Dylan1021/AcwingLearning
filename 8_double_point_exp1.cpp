@@ -2,7 +2,10 @@
 #include <string.h>
 
 using namespace std;
-
+// 输入：adf adf adf ->
+// 输出：adf
+//      adf
+//      adf
 int main()
 {
     char str[1000];
