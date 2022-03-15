@@ -16,7 +16,7 @@ void dfs(int x, int y , int s){
     if(y == n) y = 0 ; x++;
     if(x == n){
         if(s == n){
-            for(int i = 0 ; i < n ; i++) putsg(g[i]);
+            for(int i = 0 ; i < n ; i++) puts(g[i]);
             puts("");
         }
         return;
